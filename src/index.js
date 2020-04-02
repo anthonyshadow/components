@@ -4,31 +4,38 @@ import faker from 'faker';
 
 
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 const App = () => {
   return (
     <div className="ui container comments">
 
-      <CommentDetail 
-        author="sam" 
-        timeAgo="Today at 4:45pm" 
-        comment="Hello" 
-        profileImage={faker.image.avatar()}
-      />
+      <ApprovalCard>
+        <CommentDetail 
+          author="sam" 
+          timeAgo="Today at 4:45pm" 
+          comment="Hello" 
+          profileImage={faker.image.avatar()}
+        />
+      </ApprovalCard>
 
-      <CommentDetail 
-        author="Alex" 
-        timeAgo="Today at 2:45pm" 
-        comment="Whatsup?" 
-        profileImage={faker.image.avatar()}
-      />
+      <ApprovalCard>
+        <CommentDetail 
+          author="Alex" 
+          timeAgo="Today at 2:45pm" 
+          comment="Whatsup?" 
+          profileImage={faker.image.avatar()}
+        />
+      </ApprovalCard>
 
-      <CommentDetail 
-        author="Jane" 
-        timeAgo="Yesterday at 1:45pm" 
-        comment="Goodbye" 
-        profileImage={faker.image.avatar()}
-      />
+      <ApprovalCard>
+        <CommentDetail 
+          author="Jane" 
+          timeAgo="Yesterday at 1:45pm" 
+          comment="Goodbye" 
+          profileImage={faker.image.avatar()}
+        />
+      </ApprovalCard>
 
     </div>
   )
